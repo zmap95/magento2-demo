@@ -7,7 +7,7 @@ use Mastering\SampleModule\Model\ResourceModel\Item\ItemResource;
 
 class Item extends AbstractModel
 {
-    public function __construct()
+    protected function _construct()
     {
         $this->_init(ItemResource::class);
     }
