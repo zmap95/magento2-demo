@@ -10,9 +10,6 @@ class Index extends Action
 {
     public function execute()
     {
-        /** @var Raw $result */
-        $result = $this->resultFactory->create(ResultFactory::TYPE_RAW);
-
-        return $result->setContents('Hello World');
+        return $this->resultFactory->create(ResultFactory::TYPE_PAGE);
     }
 }
