@@ -23,4 +23,11 @@
             <argument name="resourceModel" xsi:type="string">Mastering\SampleModule\Model\ResourceModel\Item\ItemResource</argument>
         </arguments>
     </virtualType>
+    <virtualType name="Magento\Sales\Model\ResourceModel\Order\Grid">
+        <arguments>
+            <argument name="columns" xsi:type="array">
+                <item name="affiliate_information" xsi:type="string">sales_order_grid.affiliate_information</item>
+            </argument>
+        </arguments>
+    </virtualType>
 </config>

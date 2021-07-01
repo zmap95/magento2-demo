@@ -25,6 +25,17 @@ class UpgradeSchema implements UpgradeSchemaInterface
             );
         }
 
+        if (version_compare($context->getVersion(), '1.0.2', '<')) {
+            $setup->getConnection()->addColumn(
+                $setup->getTable('sales_order_grid'),
+                'affiliate_information',
+                [
+                    'type' => Table::TYPE_TEXT,
+                    'comment' => 'Affiliate Information'
+                ]
+            );
+        }
+
         $setup->endSetup();
     }
 }
